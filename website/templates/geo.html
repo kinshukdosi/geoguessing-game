@@ -1,0 +1,18 @@
+<div class="gmapdiv">
+    <img src="{{imgsrc}}">
+</div>
+
+<div class="bearinginput" style="padding-top: 50px;">
+    <form method="POST">
+        Guess bearing(within 15 degrees either side):
+        <input type="text" name="bearing" id="bearing">
+        <button type="submit">Submit</button>
+    </form>
+    {% if result == 'win' %}
+    correct  <br>
+
+    {% elif result == 'lose' %}
+    incorrect <br>
+    correct answer: {{answer}}
+    {% endif %}
+    <a href="/">Next</a>
